@@ -4,7 +4,7 @@ import DeleteMinutes from "@/components/deleteMinutes";
 
 const page = () => {
   return (
-    <div className="h-screen flex flex-col bg-black">
+    <div className="h-[calc(100dvh)] sm:h-screen flex flex-col bg-black">
       <p className="text-center py-6 text-5xl font-black text-white drop-shadow-lg">
         SAKKOKASSA
       </p>
