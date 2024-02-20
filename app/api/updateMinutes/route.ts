@@ -1,6 +1,7 @@
 import { updateMinutes } from "@/components/dbQuery";
 import { NextResponse, NextRequest } from "next/server";
 
+export const dynamic = "force-dynamic";
 export async function POST(request: NextRequest) {
     try {
     const data = await request.json()
