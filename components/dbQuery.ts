@@ -1,5 +1,7 @@
 import prisma from '../lib/prisma';
 
+export const dynamic = "force-dynamic";
+
 export const getStaticProps = async () => {
   const minutes = await prisma.user.findMany();
   //console.log(minutes)
