@@ -2,7 +2,7 @@ import React from "react";
 import AddMinutes from "@/components/ui/addMinutes";
 import DeleteMinutes from "@/components/deleteMinutes";
 import { getStaticProps } from "@/components/dbQuery"
-
+export const dynamic = "force-dynamic";
 
 const page = async () => {
  
