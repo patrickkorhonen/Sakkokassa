@@ -1,3 +1,4 @@
+"use client"
 import {
   Dialog,
   DialogContent,
@@ -6,16 +7,23 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
+  DialogClose,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
 import React from "react";
-import { useState } from "react";
 
 const AddMinutes = (props: any) => {
  
-    
+  const handle = async (AddedMinutes: any) => {
+    if (AddedMinutes && Number(AddedMinutes.value) > 0) {
+        const sum = Number(AddedMinutes.value) + Number(props.minutes)
+        await fetch("/api/updateMinutes", {
+          method: "POST",
+          body: JSON.stringify({id: props.id, newMinutes: sum})
+        })
+        window.location.reload()
+    }
+  }
 
   return (
     <Dialog>
@@ -38,9 +46,10 @@ const AddMinutes = (props: any) => {
             />
           </div>
         </div>
-        <DialogFooter>
-          <Button type="submit">Lisää</Button>
+        <DialogClose>
+        <DialogFooter className="bg-black text-white text-xl rounded-md p-3" onClick={() => handle(document.getElementById("minuutit"))}>Lisää
         </DialogFooter>
+        </DialogClose>
       </DialogContent>
     </Dialog>
   );
