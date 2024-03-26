@@ -47,7 +47,10 @@ const AddMinutes = (props: any) => {
           </div>
         </div>
         <DialogClose>
-        <DialogFooter className="bg-black text-white text-xl rounded-md p-3" onClick={() => handle(document.getElementById("minuutit"))}>Lisää
+        <DialogFooter className="bg-black text-white text-xl rounded-md p-3" onClick={() => handle(document.getElementById("minuutit"))}>
+          <p className="w-full">
+          Lisää
+          </p>
         </DialogFooter>
         </DialogClose>
       </DialogContent>

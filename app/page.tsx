@@ -17,7 +17,7 @@ const page = async () => {
       <p className="text-center py-6 text-5xl font-black text-white drop-shadow-lg">
         SAKKOKASSA
       </p>
-      <div className="mx-4 mb-6 grow">
+      <div className="sm:mx-96 mx-4 mb-6 grow">
         <div className="grid grid-rows-3 gap-6 h-full">
           <div className="rounded-lg shadow-lg bg-slate-300">
             <div className="text-center font-semibold h-full flex flex-col">

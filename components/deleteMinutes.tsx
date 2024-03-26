@@ -47,7 +47,10 @@ const DeleteMinutes = (props: any) => {
             <Input type="number" id="minuutit" placeholder="0" className="w-20 text-center text-2xl" />
           </div>
         </div>
-        <DialogFooter className="bg-red-500 text-slate-100 text-xl font-medium rounded-md p-3 text-center" onClick={() => handle(document.getElementById("minuutit"))}>Vähennä
+        <DialogFooter className="bg-red-500 text-slate-100 text-xl font-medium rounded-md p-3 text-center" onClick={() => handle(document.getElementById("minuutit"))}>
+        <p className="w-full">
+          Vähennä
+          </p>
         </DialogFooter>
       </DialogContent>
     </Dialog>
